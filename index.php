@@ -30,14 +30,8 @@
                 <p><?php echo $value['author']; ?></p>
                 <p><?php echo $value['year']; ?></p>
               </div>
-            <?php } ?>
-          </div>
+            </div>
+          <?php } ?>
         </div>
       </div>
     </main>
-
-
-      </div>
-    </main>
-  </body>
-</html>

@@ -5,16 +5,17 @@ body {
 .container-cd {
   width: 85%;
   margin: auto;
-  padding-top: 5%;
-  background-color: violet;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   .box {
     width: 250px;
-    background-color: lightblue;
+    background-color: black;
     padding-top: 1.6%;
+    margin-top: 5%;
 
     .box-image {
-      background-color: lime;
       height: 200px;
       width: 200px;
       margin: auto;
@@ -26,11 +27,12 @@ body {
     }
 
     .box-text {
-      background-color: yellow;
       text-align: center;
       margin-top: 15%;
       line-height: 30px;
       height: 80px;
+      color: lightgrey;
+      margin-bottom: 10%;
     }
   }
 }
