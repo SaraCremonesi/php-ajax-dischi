@@ -4,7 +4,12 @@
     box-sizing: border-box;
  }
 
+ body {
+   background-color: darkgrey;
+ }
+
 .container {
   width: 90%;
   margin: auto;
+  padding-bottom: 4%;
 }

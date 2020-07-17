@@ -4,9 +4,14 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: darkgrey;
+}
+
 .container {
   width: 90%;
   margin: auto;
+  padding-bottom: 4%;
 }
 
 header {
@@ -23,10 +28,6 @@ header .logo img {
   width: 100%;
 }
 
-body {
-  background-color: darkgrey;
-}
-
 .container-cd {
   width: 85%;
   margin: auto;
@@ -37,7 +38,7 @@ body {
 
 .container-cd .box {
   width: 250px;
-  background-color: black;
+  background-color: grey;
   padding-top: 1.6%;
   margin-top: 5%;
 }
@@ -58,7 +59,6 @@ body {
   margin-top: 15%;
   line-height: 30px;
   height: 80px;
-  color: lightgrey;
   margin-bottom: 10%;
 }
 
