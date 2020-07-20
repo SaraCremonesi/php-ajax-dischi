@@ -1,24 +1,25 @@
-var $ = require( "jquery" );
-var Handlebars = require("handlebars");
+var $ = require('jquery');
+var Handlebars = require('handlebars');
 
 $(document).ready(function() {
   $.ajax(
     {
       url: 'http://localhost:8888/php-ajax-dischi/server.php',
       method: 'GET',
-      success: function() {
-        var source = $('.container-cd').html();
-        var template = Handlebars.compile(source);
-        printCd();
+      success: function(dataResponse) {
+        printCd(dataResponse);
       },
-      error: function(request, state, error) {
+      error: function() {
         alert('Si è verificato un errore');
       }
     }
   )
 });
 
-function printCd() {
+function printCd(array) {
+  var source = $('#entry-template').html();
+  var template = Handlebars.compile(source);
+
   for (var i = 0; i < array.length; i++) {
     var singleCd = array[i];
 
