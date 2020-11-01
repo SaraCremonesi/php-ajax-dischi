@@ -10,3 +10,4 @@
 
   // Stampo a schermo l'array di oggetti/JSON
   echo $databaseJson;
+?>
