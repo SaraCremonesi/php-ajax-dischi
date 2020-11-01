@@ -34,7 +34,7 @@ function printCd(array) {
 $('.author-select-php').change(function() {
   
   // Reset
-  $('.cds-container.ajax-call').html('');
+  $('.container-cd').html('');
 
 
   var author = $('.author-select-php').val();
