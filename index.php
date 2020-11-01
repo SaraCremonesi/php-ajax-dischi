@@ -31,6 +31,17 @@
             </div>
           <?php } ?>
         </div>
+        
+          <div class="select-artist">
+            <span>Seleziona artista</span>
+            <select class="author-select-php">
+              <option value="default" selected>All</option>
+              <?php foreach ($database as $singleCd) { ?>
+                <option value="<?php echo $singleCd['author'] ?>"><?php echo $singleCd['author'] ?></option>
+              <?php } ?>
+            </select>
+          </div>
+        
       </div>
     </main>
   </body>
