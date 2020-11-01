@@ -13,8 +13,7 @@ $(document).ready(function() {
         alert('Si è verificato un errore');
       }
     }
-  )
-});
+  );
 
 function printCd(array) {
   var source = $('#entry-template').html();
@@ -29,3 +28,43 @@ function printCd(array) {
     $('.container-cd').append(html);
   }
 };
+
+
+//PER FILTRI
+$('.author-select-php').change(function() {
+  
+  // Reset
+  $('.cds-container.ajax-call').html('');
+
+
+  var author = $('.author-select-php').val();
+
+  if (author === 'default') {
+    $.ajax(
+    {
+      url: 'http://localhost:8888/php-ajax-dischi/server.php',
+      method: 'GET',
+      success: function(dataResponse) {
+        printCd(dataResponse);
+      },
+      error: function() {
+        alert('Si è verificato un errore');
+      }
+    }
+  )
+  } else {
+    // Stampo il cd con il valore author selezionato
+    $.ajax(
+    {
+      url: 'http://localhost:8888/php-ajax-dischi/serverApi.php',
+      method: 'GET',
+      success: function(dataResponse) {
+        printCd(dataResponse);
+      },
+      error: function() {
+        alert('Si è verificato un errore');
+      }
+    }
+  )
+  }
+});
