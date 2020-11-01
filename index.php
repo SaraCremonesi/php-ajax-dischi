@@ -18,15 +18,15 @@
     <main>
       <div class="container">
         <div class="container-cd">
-          <?php foreach ($database as $key => $value) { ?>
+          <?php foreach ($database as $cd) { ?>
             <div class="box">
               <div class="box-image">
-                <img src="<?php echo $value['poster']; ?>" alt="">
+                <img src="<?php echo $cd['poster']; ?>" alt="">
               </div>
               <div class="box-text">
-                <h4><?php echo $value['title']; ?></h4>
-                <p><?php echo $value['author']; ?></p>
-                <p><?php echo $value['year']; ?></p>
+                <h4><?php echo $cd['title']; ?></h4>
+                <p><?php echo $cd['author']; ?></p>
+                <p><?php echo $cd['year']; ?></p>
               </div>
             </div>
           <?php } ?>
